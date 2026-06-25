@@ -34,12 +34,12 @@
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1.9rem;
     font-weight: 800;
     background: linear-gradient(90deg, var(--cyan), var(--magenta));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
     display: block;
     margin-bottom: 6px;
   }
@@ -286,6 +286,53 @@
   .btn-bundle:hover { filter: brightness(1.1); }
   .btn-bundle:active { transform: scale(0.98); }
 
+  /* Bundle hero (cuando va primero) */
+  .bundle-hero {
+    max-width: 480px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(239,34,239,0.14), rgba(73,72,238,0.12));
+    border: 1.5px solid rgba(239,34,239,0.45);
+    border-radius: 24px;
+    padding: 30px 26px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(239,34,239,0.2);
+  }
+
+  .bundle-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--indigo));
+  }
+
+  .bundle-hero .bundle-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .bundle-hero .bundle-title {
+    font-size: 1.55rem;
+  }
+
+  .bundle-hero .bundle-price {
+    font-size: 2.8rem;
+  }
+
+  .bundle-hero .btn-bundle {
+    font-size: 1.05rem;
+    padding: 17px;
+    box-shadow: 0 0 60px rgba(239,34,239,0.5);
+  }
+
+  .card-pev {
+    padding: 26px 22px;
+    border-color: rgba(0,249,253,0.25);
+    background: rgba(0,249,253,0.05);
+  }
+
   footer {
     text-align: center;
     margin-top: 36px;
@@ -301,35 +348,49 @@
   <p>Elige tu programa y empieza hoy</p>
 </header>
 
+<!-- Bundle (primero y más destacado) -->
+<div class="bundle-hero bundle">
+  <div class="bundle-label">⭐ Mejor valor · Más popular</div>
+  <div class="bundle-title">Paquete Todo Incluido</div>
+  <div class="bundle-sub">Los 5 programas · Acceso inmediato</div>
+  <div class="bundle-price-row">
+    <span class="bundle-price">$1,000 USD</span>
+    <span class="bundle-orig">$5,000</span>
+  </div>
+  <div class="bundle-save">Ahorras $4,000 USD</div>
+  <a href="https://pay.hotmart.com/I105799724D?off=6l0fiway&bid=1778695351799" target="_blank" class="btn-bundle">
+    🚀 Quiero el Paquete Completo
+  </a>
+</div>
+
 <div class="products">
 
   <!-- El Siguiente Nivel -->
-  <div class="card c5 featured">
-    <div class="card-icon">🏆</div>
+  <div class="card c5 featured" style="padding:26px 22px;">
+    <div class="card-icon" style="font-size:2.2rem;">🏆</div>
     <div class="card-info">
       <span class="tag-hoy">Solo hoy</span>
-      <div class="card-name">El Siguiente Nivel</div>
-      <div class="card-desc">Mentoría + comunidad + sistema completo</div>
+      <div class="card-name" style="font-size:1.1rem;">El Siguiente Nivel</div>
+      <div class="card-desc" style="font-size:0.83rem;">Mentoría + comunidad + sistema completo</div>
     </div>
     <div class="card-right">
       <div>
-        <div class="price">$600 <small>USD</small></div>
-        <div class="price-strike">antes $700</div>
+        <div class="price" style="font-size:1.5rem;">$700 <small>USD</small></div>
       </div>
-      <a href="https://pay.hotmart.com/I105799724D?off=6l0fiway&bid=1778695351799" target="_blank" class="btn btn-hot">Comprar →</a>
+      <a href="https://pay.hotmart.com/I105799724D?off=6l0fiway&bid=1778695351799" target="_blank" class="btn btn-hot" style="padding:11px 24px;font-size:0.9rem;">Comprar →</a>
     </div>
   </div>
 
   <!-- PEV -->
-  <div class="card c1">
-    <div class="card-icon">🌍</div>
+  <div class="card c1 card-pev">
+    <div class="card-icon" style="font-size:2.2rem;">🌍</div>
     <div class="card-info">
-      <div class="card-name">Productos Extranjeros Virales</div>
-      <div class="card-desc">Importa y vende lo que ya arrasa afuera</div>
+      <div class="card-name" style="font-size:1.1rem;">Productos Extranjeros Virales</div>
+      <div class="card-desc" style="font-size:0.83rem;">Encuentra productos en tendencia para modelar</div>
     </div>
     <div class="card-right">
-      <div class="price">$97 <small>USD</small></div>
-      <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="btn">Comprar →</a>
+      <div class="price" style="font-size:1.5rem;">$97 <small>USD</small></div>
+      <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="btn" style="padding:11px 24px;font-size:0.9rem;">Comprar →</a>
     </div>
   </div>
 
@@ -372,21 +433,6 @@
     </div>
   </div>
 
-</div>
-
-<!-- Bundle -->
-<div class="bundle">
-  <div class="bundle-label">Mejor valor</div>
-  <div class="bundle-title">Paquete Todo Incluido</div>
-  <div class="bundle-sub">Los 5 programas · Acceso inmediato</div>
-  <div class="bundle-price-row">
-    <span class="bundle-price">$800 USD</span>
-    <span class="bundle-orig">$1,165+</span>
-  </div>
-  <div class="bundle-save">Ahorras más de $365 USD</div>
-  <a href="https://pay.hotmart.com/I105799724D?off=6l0fiway&bid=1778695351799" target="_blank" class="btn-bundle">
-    🚀 Quiero el Paquete Completo
-  </a>
 </div>
 
 <footer>Pago seguro · Hotmart · Acceso inmediato</footer>
